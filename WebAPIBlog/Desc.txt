@@ -1,0 +1,33 @@
+Просий WEB API Blog додаток
+Не треба ніяких авторизацій та зайвих валідацій
+
+Сутності:
+User:
+string Name
+
+Post
+string Title
+string Text
+User User
+
+Comment
+string Text
+Post Post
+User User
+
+Операції
++	AddUser - створити нового користувача
++	EditUserName - зміна імені
++	DeleteUser - можно (дозволено тільки якщо у користувача нема постів, налаштувати правильно CascadeDelete)
++	Add Post - додати новий пост
++	Edit Post - редагування
++	DeletePost - видалення поста (дозволено завжди, налаштувати правильно CascadeDelete)
++	LikePost, DislikePost - зробити так щоб користувач не міг 2 рази лайкнути один і той самий пост (якщо не знаєш як зробити спитай)
++	AddComment - додати коммментар до посту
++	EditComment - редагування тексту
++	DeleteComment - видалення комментарю
++	LikeComment, DislikeComment - так само
+
++	GetPosts - повертає список усіх постів у вихляді (UserId, UserName, PostId, Title, Likes, Dislikes)
++	GetPost - повертає інформацію про пост (UserName, PostId, Title, Text, Likes, Dislikes, CommentId, Comments у форматі Text, Likes, Dislikes)
+
